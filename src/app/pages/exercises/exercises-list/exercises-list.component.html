@@ -1,0 +1,48 @@
+
+<nb-card>
+  <nb-card-header class="text-center">
+    Exercícios
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="table-responsive">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+
+            <th class="col-9 align-middle">
+              Nome:
+            </th>
+
+            <th class="col-1 align-middle" colspan="2">
+              <button nbButton outline status="primary" fullWidth (click)="add()">
+                <nb-icon icon="plus-outline"></nb-icon>
+              </button>
+            </th>
+          </tr>
+        </thead>
+
+
+        <tbody >
+          <tr *ngFor="let item of itens">
+            <td class="align-middle">{{item.name }}</td>
+
+            <td class="align-middle">
+              <button nbButton outline status="warning" fullWidth>
+                <nb-icon icon="edit-2-outline"></nb-icon>
+              </button>
+            </td>
+
+            <td class="align-middle">
+              <button nbButton outline status="danger" fullWidth>
+                <nb-icon icon="trash-2-outline"></nb-icon>
+              </button>
+            </td>
+
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </nb-card-body>
+</nb-card>
